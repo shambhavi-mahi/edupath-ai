@@ -1,9 +1,7 @@
 # EduPath AI
-
 AI-powered career guidance and brain assessment web application for Indian students and professionals.
 
 ## Features
-
 - **PathBot AI Chatbot** — Floating widget with career counselling for streams, exams, colleges, and jobs
 - **Brain Power Assessment** — 9-dimension aptitude test with radar chart visualization
 - **Stream Recommendation** — PCM, PCB, Commerce, Arts guidance after Class 10
@@ -16,7 +14,6 @@ AI-powered career guidance and brain assessment web application for Indian stude
 - **PDF Export** — Download career reports
 
 ## Tech Stack
-
 - **Frontend:** Next.js 14, Tailwind CSS, Framer Motion, Recharts
 - **AI:** OpenAI GPT-4o (with built-in knowledge base fallback)
 - **Auth:** NextAuth.js (Google OAuth + Email/Password)
@@ -24,7 +21,6 @@ AI-powered career guidance and brain assessment web application for Indian stude
 - **Fonts:** Poppins, Montserrat, Inter, DM Sans, Outfit
 
 ## Getting Started
-
 ```bash
 # Install dependencies
 npm install
@@ -42,11 +38,9 @@ npm run server
 Open [http://localhost:3000](http://localhost:3000)
 
 ## Environment Variables
-
 See `.env.example` for required variables. PathBot works without an API key using the built-in knowledge base.
 
 ## Project Structure
-
 ```
 src/
   app/           # Next.js pages and API routes
@@ -56,3 +50,6 @@ src/
   types/         # TypeScript types
 server/          # Express backend
 ```
+
+## Credits
+Made by **Shambhavi** and **Shomya Sarthak Dixit**
