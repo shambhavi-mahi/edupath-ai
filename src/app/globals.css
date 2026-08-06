@@ -1,0 +1,79 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply font-inter text-text bg-background antialiased;
+  }
+
+  h1, h2 {
+    @apply font-poppins font-bold;
+  }
+
+  h3, h4 {
+    @apply font-montserrat font-semibold;
+  }
+}
+
+@layer components {
+  .glass-card {
+    @apply bg-white/70 dark:bg-card-dark/70 backdrop-blur-xl border border-primary-light/30 
+           rounded-card shadow-card transition-all duration-300;
+  }
+
+  .glass-card:hover {
+    @apply shadow-lg border-primary-light/50;
+  }
+
+  .btn-primary {
+    @apply bg-primary text-white font-dmsans font-medium px-6 py-3 rounded-button
+           hover:bg-primary-dark transition-all duration-300 hover:scale-105
+           focus:outline-none focus:shadow-glow;
+  }
+
+  .btn-secondary {
+    @apply border-2 border-secondary text-secondary font-dmsans font-medium px-6 py-3 
+           rounded-button hover:bg-secondary hover:text-white transition-all duration-300;
+  }
+
+  .btn-outline-white {
+    @apply border-2 border-white text-white font-dmsans font-medium px-6 py-3 
+           rounded-button hover:bg-white/20 transition-all duration-300;
+  }
+
+  .section-heading {
+    @apply font-poppins text-3xl md:text-4xl font-bold text-text dark:text-white mb-4;
+  }
+
+  .section-heading::after {
+    @apply block w-16 h-1 bg-secondary rounded-full mt-3;
+    content: "";
+  }
+
+  .input-field {
+    @apply w-full px-4 py-3 rounded-button border border-gray-200 dark:border-gray-700
+           bg-white dark:bg-card-dark text-text dark:text-white
+           focus:outline-none focus:shadow-glow focus:border-primary transition-all;
+  }
+
+  .emerald-badge {
+    @apply inline-flex items-center px-3 py-1 rounded-full text-xs font-dmsans
+           bg-secondary/10 text-secondary border border-secondary/30;
+  }
+
+  .indigo-pill {
+    @apply inline-flex items-center px-4 py-2 rounded-full text-sm font-dmsans
+           bg-primary/10 text-primary border border-primary/20 whitespace-nowrap;
+  }
+}
+
+@layer utilities {
+  .text-gradient {
+    @apply bg-clip-text text-transparent bg-hero;
+  }
+}
