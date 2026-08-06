@@ -56,14 +56,3 @@ src/
   types/         # TypeScript types
 server/          # Express backend
 ```
-
-## Design System
-
-- Primary Indigo: `#4338CA`
-- Secondary Emerald: `#10B981`
-- Card Background: `#F5F3FF`
-- Dark Background: `#0F0E1A`
-
-## License
-
-MIT
