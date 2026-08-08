@@ -8,6 +8,7 @@ import Providers from "@/components/Providers";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import PathBot from "@/components/chatbot/PathBot";
+import { CursorGlow } from "@/components/shared/CursorGlowClient";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -55,6 +56,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body className={`${poppins.variable} ${montserrat.variable} ${inter.variable} ${dmSans.variable} ${outfit.variable}`}>
         <Providers>
           <AppProvider>
+            <CursorGlow />
             <Header />
             <main className="min-h-screen pt-16">{children}</main>
             <Footer />

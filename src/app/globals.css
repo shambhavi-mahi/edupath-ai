@@ -2,78 +2,117 @@
 @tailwind components;
 @tailwind utilities;
 
+/* ─── Keyframes ──────────────────────────────────────── */
+@keyframes float        { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-14px)} }
+@keyframes drift-1      { 0%,100%{transform:translate(0,0) scale(1)} 50%{transform:translate(20px,-20px) scale(1.05)} }
+@keyframes drift-2      { 0%,100%{transform:translate(0,0)} 50%{transform:translate(-20px,15px)} }
+@keyframes draw-line    { from{transform:scaleX(0)} to{transform:scaleX(1)} }
+@keyframes shimmer      { 0%{background-position:-200% center} 100%{background-position:200% center} }
+@keyframes scroll-bounce{ 0%,100%{transform:translateY(0);opacity:1} 50%{transform:translateY(8px);opacity:.4} }
+@keyframes particle-rise{ 0%{transform:translateY(100vh) scale(0);opacity:0} 10%{opacity:.6} 90%{opacity:.3} 100%{transform:translateY(-10vh) scale(1);opacity:0} }
+@keyframes wiggle       { 0%,100%{transform:rotate(-4deg)} 50%{transform:rotate(4deg)} }
+@keyframes pop-in       { 0%{transform:scale(0.5);opacity:0} 70%{transform:scale(1.08)} 100%{transform:scale(1);opacity:1} }
+@keyframes card-pulse   { 0%,100%{box-shadow:0 4px 20px rgba(0,0,0,0.06)} 50%{box-shadow:0 8px 40px rgba(91,79,207,0.15)} }
+
 @layer base {
-  html {
-    scroll-behavior: smooth;
-  }
+  html { scroll-behavior: smooth; perspective: 1000px; }
 
   body {
-    @apply font-inter text-text bg-background antialiased;
+    @apply font-inter antialiased;
+    background-color: #FAF7F2;
+    color: #1A1523;
   }
 
-  h1, h2 {
-    @apply font-poppins font-bold;
-  }
-
-  h3, h4 {
-    @apply font-montserrat font-semibold;
-  }
+  h1,h2 { @apply font-poppins font-bold; }
+  h3,h4 { @apply font-montserrat font-semibold; }
 }
 
 @layer components {
-  .glass-card {
-    @apply bg-white/70 dark:bg-card-dark/70 backdrop-blur-xl border border-primary-light/30 
-           rounded-card shadow-card transition-all duration-300;
+  /* ── Card styles ── */
+  .edu-card {
+    @apply bg-white rounded-card border border-border shadow-card transition-all duration-300;
+  }
+  .edu-card:hover {
+    @apply shadow-card-hover -translate-y-1;
   }
 
-  .glass-card:hover {
-    @apply shadow-lg border-primary-light/50;
-  }
+  /* Coloured pastel cards */
+  .card-pink     { background: #FDE8F0; border-color: #F9A8C9; }
+  .card-orange   { background: #FEF3C7; border-color: #FBBF24; }
+  .card-lavender { background: #EDE9FE; border-color: #C4B5FD; }
+  .card-mint     { background: #D1FAE5; border-color: #6EE7B7; }
+  .card-peach    { background: #FEE2E2; border-color: #FCA5A5; }
+  .card-sky      { background: #DBEAFE; border-color: #93C5FD; }
 
+  /* ── Buttons ── */
   .btn-primary {
-    @apply bg-primary text-white font-dmsans font-medium px-6 py-3 rounded-button
-           hover:bg-primary-dark transition-all duration-300 hover:scale-105
-           focus:outline-none focus:shadow-glow;
+    @apply bg-primary text-white font-dmsans font-semibold px-6 py-3 rounded-pill
+           hover:bg-primary-dark transition-all duration-300 hover:scale-[1.03] hover:shadow-soft
+           focus:outline-none focus:ring-2 focus:ring-primary/40;
   }
-
   .btn-secondary {
-    @apply border-2 border-secondary text-secondary font-dmsans font-medium px-6 py-3 
-           rounded-button hover:bg-secondary hover:text-white transition-all duration-300;
+    @apply bg-white border-2 border-primary text-primary font-dmsans font-semibold px-6 py-3
+           rounded-pill hover:bg-primary/5 transition-all duration-300;
+  }
+  .btn-outline {
+    @apply border border-border text-text font-dmsans font-medium px-5 py-2.5
+           rounded-pill hover:border-primary hover:text-primary bg-white transition-all duration-300;
   }
 
-  .btn-outline-white {
-    @apply border-2 border-white text-white font-dmsans font-medium px-6 py-3 
-           rounded-button hover:bg-white/20 transition-all duration-300;
-  }
-
+  /* ── Section headings ── */
   .section-heading {
-    @apply font-poppins text-3xl md:text-4xl font-bold text-text dark:text-white mb-4;
+    @apply font-poppins text-3xl md:text-4xl font-bold text-text mb-3;
   }
-
   .section-heading::after {
-    @apply block w-16 h-1 bg-secondary rounded-full mt-3;
     content: "";
+    @apply block w-12 h-1.5 bg-primary/70 rounded-full mt-3;
+    transform-origin: left;
+    animation: draw-line 0.7s ease-out forwards;
   }
+  .section-heading.center-heading::after { @apply mx-auto; transform-origin: center; }
 
+  /* ── Input field ── */
   .input-field {
-    @apply w-full px-4 py-3 rounded-button border border-gray-200 dark:border-gray-700
-           bg-white dark:bg-card-dark text-text dark:text-white
-           focus:outline-none focus:shadow-glow focus:border-primary transition-all;
+    @apply w-full px-4 py-3 rounded-card2 border border-border bg-white text-text
+           focus:outline-none focus:ring-2 focus:ring-primary/25 focus:border-primary transition-all;
   }
 
-  .emerald-badge {
-    @apply inline-flex items-center px-3 py-1 rounded-full text-xs font-dmsans
-           bg-secondary/10 text-secondary border border-secondary/30;
+  /* ── Badge / pill ── */
+  .badge {
+    @apply inline-flex items-center px-3 py-1 rounded-pill text-xs font-dmsans font-medium;
+  }
+  .badge-primary  { @apply bg-primary-subtle text-primary; }
+  .badge-green    { @apply bg-secondary-subtle text-secondary-dark; }
+
+  /* ── Category pill (filter buttons) ── */
+  .cat-pill {
+    @apply inline-flex items-center gap-2 px-4 py-2 rounded-pill text-sm font-dmsans font-medium
+           bg-white border border-border text-text-muted hover:border-primary hover:text-primary
+           transition-all duration-200 cursor-pointer whitespace-nowrap;
+  }
+  .cat-pill.active {
+    @apply bg-primary text-white border-primary;
   }
 
-  .indigo-pill {
-    @apply inline-flex items-center px-4 py-2 rounded-full text-sm font-dmsans
-           bg-primary/10 text-primary border border-primary/20 whitespace-nowrap;
+  /* ── Animations ── */
+  .float-anim   { animation: float 7s ease-in-out infinite; }
+  .wiggle-anim  { animation: wiggle 3s ease-in-out infinite; }
+  .scroll-bounce{ animation: scroll-bounce 1.8s ease-in-out infinite; }
+
+  /* ── Glass card (legacy) ── */
+  .glass-card {
+    @apply bg-white/80 backdrop-blur-xl border border-border rounded-card shadow-card transition-all duration-300;
   }
+  .glass-card:hover { @apply shadow-card-hover; }
 }
 
 @layer utilities {
   .text-gradient {
-    @apply bg-clip-text text-transparent bg-hero;
+    background: linear-gradient(135deg, #5B4FCF 0%, #10B981 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
   }
+  .bg-warm { background-color: #FAF7F2; }
+  .particle-container { position: absolute; inset: 0; overflow: hidden; pointer-events: none; }
 }
