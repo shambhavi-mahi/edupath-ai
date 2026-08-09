@@ -244,7 +244,7 @@ export default function Hero() {
               </Magnetic>
               <Magnetic strength={0.25}>
                 <button
-                  onClick={() => window.dispatchEvent(new CustomEvent("open-pathbot"))}
+                  onClick={() => document.getElementById("demo-video")?.scrollIntoView({ behavior: "smooth" })}
                   style={{
                     display:"inline-flex", alignItems:"center", gap:10,
                     padding:"14px 22px", borderRadius:999,
