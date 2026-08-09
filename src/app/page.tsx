@@ -1,6 +1,7 @@
 import Hero from "@/components/landing/Hero";
 import HowItWorks from "@/components/landing/HowItWorks";
 import VideoSection from "@/components/landing/VideoSection";
+import ProblemStatement from "@/components/landing/ProblemStatement";
 import StatsBar from "@/components/landing/StatsBar";
 import FeaturesGrid from "@/components/landing/FeaturesGrid";
 import BrainPreview from "@/components/landing/BrainPreview";
@@ -15,6 +16,7 @@ export default function HomePage() {
   return (
     <>
       <Hero />
+      <ProblemStatement />
       <VideoSection />
       <HowItWorks />
       <StatsBar />
