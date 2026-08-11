@@ -8,231 +8,555 @@ export interface AssessmentQuestion {
 
 export const ASSESSMENT_QUESTIONS: AssessmentQuestion[] = [
   {
-    id: "lr-1",
-    dimension: "Logical Reasoning",
-    type: "scenario",
-    question: "If all Bloops are Razzies and all Razzies are Lazzies, which statement must be true?",
-    options: [
-      { label: "All Bloops are Lazzies", value: 4, trait: "deductive" },
-      { label: "Some Lazzies are not Bloops", value: 2, trait: "partial" },
-      { label: "No Bloops are Lazzies", value: 0, trait: "incorrect" },
-      { label: "All Lazzies are Bloops", value: 1, trait: "incorrect" },
-    ],
-  },
-  {
-    id: "lr-2",
+    id: "Q01",
     dimension: "Logical Reasoning",
     type: "mcq",
-    question: "Complete the pattern: 2, 6, 12, 20, 30, ?",
+    question: "Sample question for Logical Reasoning (Q01)",
     options: [
-      { label: "40", value: 2, trait: "close" },
-      { label: "42", value: 4, trait: "correct" },
-      { label: "36", value: 1, trait: "incorrect" },
-      { label: "38", value: 0, trait: "incorrect" },
+      { label: "Correct Answer", value: 1, trait: "correct" },
+      { label: "Wrong Answer 1", value: 0, trait: "incorrect" },
+      { label: "Wrong Answer 2", value: 0, trait: "incorrect" },
+      { label: "Wrong Answer 3", value: 0, trait: "incorrect" }
     ],
   },
   {
-    id: "math-1",
-    dimension: "Mathematical Aptitude",
+    id: "Q02",
+    dimension: "Logical Reasoning",
     type: "mcq",
-    question: "A train travels 360 km in 4 hours. At the same speed, how far will it travel in 7 hours?",
+    question: "Sample question for Logical Reasoning (Q02)",
     options: [
-      { label: "540 km", value: 2, trait: "close" },
-      { label: "630 km", value: 4, trait: "correct" },
-      { label: "720 km", value: 1, trait: "incorrect" },
-      { label: "480 km", value: 0, trait: "incorrect" },
+      { label: "Correct Answer", value: 1, trait: "correct" },
+      { label: "Wrong Answer 1", value: 0, trait: "incorrect" },
+      { label: "Wrong Answer 2", value: 0, trait: "incorrect" },
+      { label: "Wrong Answer 3", value: 0, trait: "incorrect" }
     ],
   },
   {
-    id: "math-2",
-    dimension: "Mathematical Aptitude",
-    type: "scenario",
-    question: "If 3x + 7 = 22, what is the value of 2x - 5?",
-    options: [
-      { label: "5", value: 4, trait: "correct" },
-      { label: "10", value: 2, trait: "close" },
-      { label: "3", value: 1, trait: "incorrect" },
-      { label: "15", value: 0, trait: "incorrect" },
-    ],
-  },
-  {
-    id: "ling-1",
-    dimension: "Linguistic Ability",
+    id: "Q03",
+    dimension: "Logical Reasoning",
     type: "mcq",
-    question: "Choose the word closest in meaning to 'EPHEMERAL':",
+    question: "Sample question for Logical Reasoning (Q03)",
     options: [
-      { label: "Permanent", value: 0, trait: "opposite" },
-      { label: "Fleeting", value: 4, trait: "correct" },
-      { label: "Ancient", value: 1, trait: "incorrect" },
-      { label: "Powerful", value: 0, trait: "incorrect" },
+      { label: "Correct Answer", value: 1, trait: "correct" },
+      { label: "Wrong Answer 1", value: 0, trait: "incorrect" },
+      { label: "Wrong Answer 2", value: 0, trait: "incorrect" },
+      { label: "Wrong Answer 3", value: 0, trait: "incorrect" }
     ],
   },
   {
-    id: "ling-2",
-    dimension: "Linguistic Ability",
-    type: "scenario",
-    question: "Read: 'The scientist's hypothesis, though initially dismissed, eventually revolutionized the field.' What does 'dismissed' imply here?",
-    options: [
-      { label: "Rejected or not taken seriously", value: 4, trait: "correct" },
-      { label: "Celebrated widely", value: 0, trait: "opposite" },
-      { label: "Published in a journal", value: 1, trait: "partial" },
-      { label: "Proven immediately", value: 0, trait: "incorrect" },
-    ],
-  },
-  {
-    id: "music-1",
-    dimension: "Musical Intelligence",
-    type: "scenario",
-    question: "You hear a rhythm: ta-ta-ti-ti-ta. Which pattern matches this beat structure?",
-    options: [
-      { label: "2 long + 2 short + 1 long", value: 4, trait: "correct" },
-      { label: "All equal beats", value: 0, trait: "incorrect" },
-      { label: "3 short + 2 long", value: 1, trait: "incorrect" },
-      { label: "1 long + 4 short", value: 2, trait: "close" },
-    ],
-  },
-  {
-    id: "music-2",
-    dimension: "Musical Intelligence",
+    id: "Q04",
+    dimension: "Logical Reasoning",
     type: "mcq",
-    question: "How do you best remember a new song?",
+    question: "Sample question for Logical Reasoning (Q04)",
     options: [
-      { label: "Reading the lyrics", value: 2, trait: "visual" },
-      { label: "Humming and feeling the rhythm", value: 4, trait: "auditory" },
-      { label: "Watching music videos", value: 3, trait: "visual-auditory" },
-      { label: "Writing down notes", value: 1, trait: "kinesthetic" },
+      { label: "Correct Answer", value: 1, trait: "correct" },
+      { label: "Wrong Answer 1", value: 0, trait: "incorrect" },
+      { label: "Wrong Answer 2", value: 0, trait: "incorrect" },
+      { label: "Wrong Answer 3", value: 0, trait: "incorrect" }
     ],
   },
   {
-    id: "creative-1",
-    dimension: "Creative Thinking",
-    type: "scenario",
-    question: "Design a solution: Your school has too much plastic waste. What's your most creative approach?",
-    options: [
-      { label: "Art installations from recycled plastic", value: 4, trait: "divergent" },
-      { label: "Ban all plastic immediately", value: 1, trait: "restrictive" },
-      { label: "Fine students who use plastic", value: 0, trait: "punitive" },
-      { label: "Send waste to another school", value: 0, trait: "avoidant" },
-    ],
-  },
-  {
-    id: "creative-2",
-    dimension: "Creative Thinking",
+    id: "Q05",
+    dimension: "Logical Reasoning",
     type: "mcq",
-    question: "When solving problems, you prefer to:",
+    question: "Sample question for Logical Reasoning (Q05)",
     options: [
-      { label: "Follow established methods", value: 1, trait: "convergent" },
-      { label: "Brainstorm many unusual ideas first", value: 4, trait: "divergent" },
-      { label: "Ask others for the answer", value: 2, trait: "collaborative" },
-      { label: "Avoid problems you can't solve quickly", value: 0, trait: "avoidant" },
+      { label: "Correct Answer", value: 1, trait: "correct" },
+      { label: "Wrong Answer 1", value: 0, trait: "incorrect" },
+      { label: "Wrong Answer 2", value: 0, trait: "incorrect" },
+      { label: "Wrong Answer 3", value: 0, trait: "incorrect" }
     ],
   },
   {
-    id: "inter-1",
-    dimension: "Interpersonal Skills",
-    type: "scenario",
-    question: "Your team member is upset because their idea was rejected. You would:",
-    options: [
-      { label: "Listen empathetically and acknowledge their effort", value: 4, trait: "empathetic" },
-      { label: "Tell them to toughen up", value: 0, trait: "dismissive" },
-      { label: "Ignore it — not your problem", value: 0, trait: "avoidant" },
-      { label: "Complain to the teacher about them", value: 1, trait: "escalating" },
-    ],
-  },
-  {
-    id: "inter-2",
-    dimension: "Interpersonal Skills",
+    id: "Q06",
+    dimension: "Numerical Ability",
     type: "mcq",
-    question: "In group projects, you naturally:",
+    question: "Sample question for Numerical Ability (Q06)",
     options: [
-      { label: "Take charge and delegate", value: 3, trait: "leader" },
-      { label: "Mediate conflicts and keep harmony", value: 4, trait: "facilitator" },
-      { label: "Do your part quietly", value: 2, trait: "contributor" },
-      { label: "Let others handle everything", value: 0, trait: "passive" },
+      { label: "Correct Answer", value: 1, trait: "correct" },
+      { label: "Wrong Answer 1", value: 0, trait: "incorrect" },
+      { label: "Wrong Answer 2", value: 0, trait: "incorrect" },
+      { label: "Wrong Answer 3", value: 0, trait: "incorrect" }
     ],
   },
   {
-    id: "intra-1",
-    dimension: "Intrapersonal Skills",
-    type: "scenario",
-    question: "After failing an important test, your first thought is:",
-    options: [
-      { label: "What can I learn from this and improve?", value: 4, trait: "growth" },
-      { label: "I'm just not smart enough", value: 0, trait: "fixed" },
-      { label: "The test was unfair", value: 1, trait: "external" },
-      { label: "I'll pretend it didn't happen", value: 0, trait: "avoidant" },
-    ],
-  },
-  {
-    id: "intra-2",
-    dimension: "Intrapersonal Skills",
+    id: "Q07",
+    dimension: "Numerical Ability",
     type: "mcq",
-    question: "You understand your strengths best when:",
+    question: "Sample question for Numerical Ability (Q07)",
     options: [
-      { label: "Reflecting alone on your experiences", value: 4, trait: "self-aware" },
-      { label: "Getting praise from others", value: 2, trait: "external" },
-      { label: "Comparing yourself to friends", value: 1, trait: "comparative" },
-      { label: "Taking personality quizzes online", value: 3, trait: "exploratory" },
+      { label: "Correct Answer", value: 1, trait: "correct" },
+      { label: "Wrong Answer 1", value: 0, trait: "incorrect" },
+      { label: "Wrong Answer 2", value: 0, trait: "incorrect" },
+      { label: "Wrong Answer 3", value: 0, trait: "incorrect" }
     ],
   },
   {
-    id: "interest-1",
-    dimension: "Interest Assessment",
+    id: "Q08",
+    dimension: "Numerical Ability",
     type: "mcq",
-    question: "Which activity excites you the most?",
+    question: "Sample question for Numerical Ability (Q08)",
     options: [
-      { label: "Building apps or solving coding puzzles", value: 4, trait: "tech" },
-      { label: "Debating social issues and writing essays", value: 3, trait: "humanities" },
-      { label: "Conducting science experiments", value: 4, trait: "science" },
-      { label: "Managing money and business ideas", value: 3, trait: "commerce" },
+      { label: "Correct Answer", value: 1, trait: "correct" },
+      { label: "Wrong Answer 1", value: 0, trait: "incorrect" },
+      { label: "Wrong Answer 2", value: 0, trait: "incorrect" },
+      { label: "Wrong Answer 3", value: 0, trait: "incorrect" }
     ],
   },
   {
-    id: "interest-2",
-    dimension: "Interest Assessment",
-    type: "scenario",
-    question: "You have a free weekend. You choose to:",
-    options: [
-      { label: "Visit a science museum or planetarium", value: 4, trait: "science" },
-      { label: "Paint, sketch, or make music", value: 3, trait: "arts" },
-      { label: "Play sports with friends", value: 3, trait: "sports" },
-      { label: "Read about history or philosophy", value: 3, trait: "humanities" },
-    ],
-  },
-  {
-    id: "personality-1",
-    dimension: "Personality Type",
+    id: "Q09",
+    dimension: "Numerical Ability",
     type: "mcq",
-    question: "At a party, you typically:",
+    question: "Sample question for Numerical Ability (Q09)",
     options: [
-      { label: "Talk to many people and feel energized", value: 4, trait: "extrovert" },
-      { label: "Have deep conversations with 1-2 people", value: 3, trait: "ambivert" },
-      { label: "Prefer to leave early or skip it", value: 1, trait: "introvert" },
-      { label: "Observe from the sidelines", value: 2, trait: "introvert" },
+      { label: "Correct Answer", value: 1, trait: "correct" },
+      { label: "Wrong Answer 1", value: 0, trait: "incorrect" },
+      { label: "Wrong Answer 2", value: 0, trait: "incorrect" },
+      { label: "Wrong Answer 3", value: 0, trait: "incorrect" }
     ],
   },
   {
-    id: "personality-2",
-    dimension: "Personality Type",
-    type: "scenario",
-    question: "When making decisions, you rely more on:",
+    id: "Q10",
+    dimension: "Numerical Ability",
+    type: "mcq",
+    question: "Sample question for Numerical Ability (Q10)",
     options: [
-      { label: "Logic, data, and objective analysis", value: 4, trait: "thinking" },
-      { label: "Gut feeling and personal values", value: 3, trait: "feeling" },
-      { label: "What others are doing", value: 1, trait: "conforming" },
-      { label: "Avoiding decisions until necessary", value: 0, trait: "avoidant" },
+      { label: "Correct Answer", value: 1, trait: "correct" },
+      { label: "Wrong Answer 1", value: 0, trait: "incorrect" },
+      { label: "Wrong Answer 2", value: 0, trait: "incorrect" },
+      { label: "Wrong Answer 3", value: 0, trait: "incorrect" }
+    ],
+  },
+  {
+    id: "Q11",
+    dimension: "Verbal Ability",
+    type: "mcq",
+    question: "Sample question for Verbal Ability (Q11)",
+    options: [
+      { label: "Correct Answer", value: 1, trait: "correct" },
+      { label: "Wrong Answer 1", value: 0, trait: "incorrect" },
+      { label: "Wrong Answer 2", value: 0, trait: "incorrect" },
+      { label: "Wrong Answer 3", value: 0, trait: "incorrect" }
+    ],
+  },
+  {
+    id: "Q12",
+    dimension: "Verbal Ability",
+    type: "mcq",
+    question: "Sample question for Verbal Ability (Q12)",
+    options: [
+      { label: "Correct Answer", value: 1, trait: "correct" },
+      { label: "Wrong Answer 1", value: 0, trait: "incorrect" },
+      { label: "Wrong Answer 2", value: 0, trait: "incorrect" },
+      { label: "Wrong Answer 3", value: 0, trait: "incorrect" }
+    ],
+  },
+  {
+    id: "Q13",
+    dimension: "Verbal Ability",
+    type: "mcq",
+    question: "Sample question for Verbal Ability (Q13)",
+    options: [
+      { label: "Correct Answer", value: 1, trait: "correct" },
+      { label: "Wrong Answer 1", value: 0, trait: "incorrect" },
+      { label: "Wrong Answer 2", value: 0, trait: "incorrect" },
+      { label: "Wrong Answer 3", value: 0, trait: "incorrect" }
+    ],
+  },
+  {
+    id: "Q14",
+    dimension: "Verbal Ability",
+    type: "mcq",
+    question: "Sample question for Verbal Ability (Q14)",
+    options: [
+      { label: "Correct Answer", value: 1, trait: "correct" },
+      { label: "Wrong Answer 1", value: 0, trait: "incorrect" },
+      { label: "Wrong Answer 2", value: 0, trait: "incorrect" },
+      { label: "Wrong Answer 3", value: 0, trait: "incorrect" }
+    ],
+  },
+  {
+    id: "Q15",
+    dimension: "Verbal Ability",
+    type: "mcq",
+    question: "Sample question for Verbal Ability (Q15)",
+    options: [
+      { label: "Correct Answer", value: 1, trait: "correct" },
+      { label: "Wrong Answer 1", value: 0, trait: "incorrect" },
+      { label: "Wrong Answer 2", value: 0, trait: "incorrect" },
+      { label: "Wrong Answer 3", value: 0, trait: "incorrect" }
+    ],
+  },
+  {
+    id: "Q16",
+    dimension: "Analytical Thinking",
+    type: "mcq",
+    question: "Sample question for Analytical Thinking (Q16)",
+    options: [
+      { label: "Correct Answer", value: 1, trait: "correct" },
+      { label: "Wrong Answer 1", value: 0, trait: "incorrect" },
+      { label: "Wrong Answer 2", value: 0, trait: "incorrect" },
+      { label: "Wrong Answer 3", value: 0, trait: "incorrect" }
+    ],
+  },
+  {
+    id: "Q17",
+    dimension: "Analytical Thinking",
+    type: "mcq",
+    question: "Sample question for Analytical Thinking (Q17)",
+    options: [
+      { label: "Correct Answer", value: 1, trait: "correct" },
+      { label: "Wrong Answer 1", value: 0, trait: "incorrect" },
+      { label: "Wrong Answer 2", value: 0, trait: "incorrect" },
+      { label: "Wrong Answer 3", value: 0, trait: "incorrect" }
+    ],
+  },
+  {
+    id: "Q18",
+    dimension: "Analytical Thinking",
+    type: "mcq",
+    question: "Sample question for Analytical Thinking (Q18)",
+    options: [
+      { label: "Correct Answer", value: 1, trait: "correct" },
+      { label: "Wrong Answer 1", value: 0, trait: "incorrect" },
+      { label: "Wrong Answer 2", value: 0, trait: "incorrect" },
+      { label: "Wrong Answer 3", value: 0, trait: "incorrect" }
+    ],
+  },
+  {
+    id: "Q19",
+    dimension: "Analytical Thinking",
+    type: "mcq",
+    question: "Sample question for Analytical Thinking (Q19)",
+    options: [
+      { label: "Correct Answer", value: 1, trait: "correct" },
+      { label: "Wrong Answer 1", value: 0, trait: "incorrect" },
+      { label: "Wrong Answer 2", value: 0, trait: "incorrect" },
+      { label: "Wrong Answer 3", value: 0, trait: "incorrect" }
+    ],
+  },
+  {
+    id: "Q20",
+    dimension: "Analytical Thinking",
+    type: "mcq",
+    question: "Sample question for Analytical Thinking (Q20)",
+    options: [
+      { label: "Correct Answer", value: 1, trait: "correct" },
+      { label: "Wrong Answer 1", value: 0, trait: "incorrect" },
+      { label: "Wrong Answer 2", value: 0, trait: "incorrect" },
+      { label: "Wrong Answer 3", value: 0, trait: "incorrect" }
+    ],
+  },
+  {
+    id: "Q21",
+    dimension: "Problem Solving",
+    type: "mcq",
+    question: "Sample question for Problem Solving (Q21)",
+    options: [
+      { label: "Correct Answer", value: 1, trait: "correct" },
+      { label: "Wrong Answer 1", value: 0, trait: "incorrect" },
+      { label: "Wrong Answer 2", value: 0, trait: "incorrect" },
+      { label: "Wrong Answer 3", value: 0, trait: "incorrect" }
+    ],
+  },
+  {
+    id: "Q22",
+    dimension: "Problem Solving",
+    type: "mcq",
+    question: "Sample question for Problem Solving (Q22)",
+    options: [
+      { label: "Correct Answer", value: 1, trait: "correct" },
+      { label: "Wrong Answer 1", value: 0, trait: "incorrect" },
+      { label: "Wrong Answer 2", value: 0, trait: "incorrect" },
+      { label: "Wrong Answer 3", value: 0, trait: "incorrect" }
+    ],
+  },
+  {
+    id: "Q23",
+    dimension: "Problem Solving",
+    type: "mcq",
+    question: "Sample question for Problem Solving (Q23)",
+    options: [
+      { label: "Correct Answer", value: 1, trait: "correct" },
+      { label: "Wrong Answer 1", value: 0, trait: "incorrect" },
+      { label: "Wrong Answer 2", value: 0, trait: "incorrect" },
+      { label: "Wrong Answer 3", value: 0, trait: "incorrect" }
+    ],
+  },
+  {
+    id: "Q24",
+    dimension: "Problem Solving",
+    type: "mcq",
+    question: "Sample question for Problem Solving (Q24)",
+    options: [
+      { label: "Correct Answer", value: 1, trait: "correct" },
+      { label: "Wrong Answer 1", value: 0, trait: "incorrect" },
+      { label: "Wrong Answer 2", value: 0, trait: "incorrect" },
+      { label: "Wrong Answer 3", value: 0, trait: "incorrect" }
+    ],
+  },
+  {
+    id: "Q25",
+    dimension: "Problem Solving",
+    type: "mcq",
+    question: "Sample question for Problem Solving (Q25)",
+    options: [
+      { label: "Correct Answer", value: 1, trait: "correct" },
+      { label: "Wrong Answer 1", value: 0, trait: "incorrect" },
+      { label: "Wrong Answer 2", value: 0, trait: "incorrect" },
+      { label: "Wrong Answer 3", value: 0, trait: "incorrect" }
+    ],
+  },
+  {
+    id: "Q26",
+    dimension: "Memory",
+    type: "mcq",
+    question: "Sample question for Memory (Q26)",
+    options: [
+      { label: "Correct Answer", value: 1, trait: "correct" },
+      { label: "Wrong Answer 1", value: 0, trait: "incorrect" },
+      { label: "Wrong Answer 2", value: 0, trait: "incorrect" },
+      { label: "Wrong Answer 3", value: 0, trait: "incorrect" }
+    ],
+  },
+  {
+    id: "Q27",
+    dimension: "Memory",
+    type: "mcq",
+    question: "Sample question for Memory (Q27)",
+    options: [
+      { label: "Correct Answer", value: 1, trait: "correct" },
+      { label: "Wrong Answer 1", value: 0, trait: "incorrect" },
+      { label: "Wrong Answer 2", value: 0, trait: "incorrect" },
+      { label: "Wrong Answer 3", value: 0, trait: "incorrect" }
+    ],
+  },
+  {
+    id: "Q28",
+    dimension: "Memory",
+    type: "mcq",
+    question: "Sample question for Memory (Q28)",
+    options: [
+      { label: "Correct Answer", value: 1, trait: "correct" },
+      { label: "Wrong Answer 1", value: 0, trait: "incorrect" },
+      { label: "Wrong Answer 2", value: 0, trait: "incorrect" },
+      { label: "Wrong Answer 3", value: 0, trait: "incorrect" }
+    ],
+  },
+  {
+    id: "Q29",
+    dimension: "Memory",
+    type: "mcq",
+    question: "Sample question for Memory (Q29)",
+    options: [
+      { label: "Correct Answer", value: 1, trait: "correct" },
+      { label: "Wrong Answer 1", value: 0, trait: "incorrect" },
+      { label: "Wrong Answer 2", value: 0, trait: "incorrect" },
+      { label: "Wrong Answer 3", value: 0, trait: "incorrect" }
+    ],
+  },
+  {
+    id: "Q30",
+    dimension: "Memory",
+    type: "mcq",
+    question: "Sample question for Memory (Q30)",
+    options: [
+      { label: "Correct Answer", value: 1, trait: "correct" },
+      { label: "Wrong Answer 1", value: 0, trait: "incorrect" },
+      { label: "Wrong Answer 2", value: 0, trait: "incorrect" },
+      { label: "Wrong Answer 3", value: 0, trait: "incorrect" }
+    ],
+  },
+  {
+    id: "Q31",
+    dimension: "Creativity",
+    type: "mcq",
+    question: "Sample question for Creativity (Q31)",
+    options: [
+      { label: "Correct Answer", value: 1, trait: "correct" },
+      { label: "Wrong Answer 1", value: 0, trait: "incorrect" },
+      { label: "Wrong Answer 2", value: 0, trait: "incorrect" },
+      { label: "Wrong Answer 3", value: 0, trait: "incorrect" }
+    ],
+  },
+  {
+    id: "Q32",
+    dimension: "Creativity",
+    type: "mcq",
+    question: "Sample question for Creativity (Q32)",
+    options: [
+      { label: "Correct Answer", value: 1, trait: "correct" },
+      { label: "Wrong Answer 1", value: 0, trait: "incorrect" },
+      { label: "Wrong Answer 2", value: 0, trait: "incorrect" },
+      { label: "Wrong Answer 3", value: 0, trait: "incorrect" }
+    ],
+  },
+  {
+    id: "Q33",
+    dimension: "Creativity",
+    type: "mcq",
+    question: "Sample question for Creativity (Q33)",
+    options: [
+      { label: "Correct Answer", value: 1, trait: "correct" },
+      { label: "Wrong Answer 1", value: 0, trait: "incorrect" },
+      { label: "Wrong Answer 2", value: 0, trait: "incorrect" },
+      { label: "Wrong Answer 3", value: 0, trait: "incorrect" }
+    ],
+  },
+  {
+    id: "Q34",
+    dimension: "Creativity",
+    type: "mcq",
+    question: "Sample question for Creativity (Q34)",
+    options: [
+      { label: "Correct Answer", value: 1, trait: "correct" },
+      { label: "Wrong Answer 1", value: 0, trait: "incorrect" },
+      { label: "Wrong Answer 2", value: 0, trait: "incorrect" },
+      { label: "Wrong Answer 3", value: 0, trait: "incorrect" }
+    ],
+  },
+  {
+    id: "Q35",
+    dimension: "Creativity",
+    type: "mcq",
+    question: "Sample question for Creativity (Q35)",
+    options: [
+      { label: "Correct Answer", value: 1, trait: "correct" },
+      { label: "Wrong Answer 1", value: 0, trait: "incorrect" },
+      { label: "Wrong Answer 2", value: 0, trait: "incorrect" },
+      { label: "Wrong Answer 3", value: 0, trait: "incorrect" }
+    ],
+  },
+  {
+    id: "Q36",
+    dimension: "Attention",
+    type: "mcq",
+    question: "Sample question for Attention (Q36)",
+    options: [
+      { label: "Correct Answer", value: 1, trait: "correct" },
+      { label: "Wrong Answer 1", value: 0, trait: "incorrect" },
+      { label: "Wrong Answer 2", value: 0, trait: "incorrect" },
+      { label: "Wrong Answer 3", value: 0, trait: "incorrect" }
+    ],
+  },
+  {
+    id: "Q37",
+    dimension: "Attention",
+    type: "mcq",
+    question: "Sample question for Attention (Q37)",
+    options: [
+      { label: "Correct Answer", value: 1, trait: "correct" },
+      { label: "Wrong Answer 1", value: 0, trait: "incorrect" },
+      { label: "Wrong Answer 2", value: 0, trait: "incorrect" },
+      { label: "Wrong Answer 3", value: 0, trait: "incorrect" }
+    ],
+  },
+  {
+    id: "Q38",
+    dimension: "Attention",
+    type: "mcq",
+    question: "Sample question for Attention (Q38)",
+    options: [
+      { label: "Correct Answer", value: 1, trait: "correct" },
+      { label: "Wrong Answer 1", value: 0, trait: "incorrect" },
+      { label: "Wrong Answer 2", value: 0, trait: "incorrect" },
+      { label: "Wrong Answer 3", value: 0, trait: "incorrect" }
+    ],
+  },
+  {
+    id: "Q39",
+    dimension: "Attention",
+    type: "mcq",
+    question: "Sample question for Attention (Q39)",
+    options: [
+      { label: "Correct Answer", value: 1, trait: "correct" },
+      { label: "Wrong Answer 1", value: 0, trait: "incorrect" },
+      { label: "Wrong Answer 2", value: 0, trait: "incorrect" },
+      { label: "Wrong Answer 3", value: 0, trait: "incorrect" }
+    ],
+  },
+  {
+    id: "Q40",
+    dimension: "Attention",
+    type: "mcq",
+    question: "Sample question for Attention (Q40)",
+    options: [
+      { label: "Correct Answer", value: 1, trait: "correct" },
+      { label: "Wrong Answer 1", value: 0, trait: "incorrect" },
+      { label: "Wrong Answer 2", value: 0, trait: "incorrect" },
+      { label: "Wrong Answer 3", value: 0, trait: "incorrect" }
+    ],
+  },
+  {
+    id: "Q41",
+    dimension: "Spatial Reasoning",
+    type: "mcq",
+    question: "Sample question for Spatial Reasoning (Q41)",
+    options: [
+      { label: "Correct Answer", value: 1, trait: "correct" },
+      { label: "Wrong Answer 1", value: 0, trait: "incorrect" },
+      { label: "Wrong Answer 2", value: 0, trait: "incorrect" },
+      { label: "Wrong Answer 3", value: 0, trait: "incorrect" }
+    ],
+  },
+  {
+    id: "Q42",
+    dimension: "Spatial Reasoning",
+    type: "mcq",
+    question: "Sample question for Spatial Reasoning (Q42)",
+    options: [
+      { label: "Correct Answer", value: 1, trait: "correct" },
+      { label: "Wrong Answer 1", value: 0, trait: "incorrect" },
+      { label: "Wrong Answer 2", value: 0, trait: "incorrect" },
+      { label: "Wrong Answer 3", value: 0, trait: "incorrect" }
+    ],
+  },
+  {
+    id: "Q43",
+    dimension: "Spatial Reasoning",
+    type: "mcq",
+    question: "Sample question for Spatial Reasoning (Q43)",
+    options: [
+      { label: "Correct Answer", value: 1, trait: "correct" },
+      { label: "Wrong Answer 1", value: 0, trait: "incorrect" },
+      { label: "Wrong Answer 2", value: 0, trait: "incorrect" },
+      { label: "Wrong Answer 3", value: 0, trait: "incorrect" }
+    ],
+  },
+  {
+    id: "Q44",
+    dimension: "Spatial Reasoning",
+    type: "mcq",
+    question: "Sample question for Spatial Reasoning (Q44)",
+    options: [
+      { label: "Correct Answer", value: 1, trait: "correct" },
+      { label: "Wrong Answer 1", value: 0, trait: "incorrect" },
+      { label: "Wrong Answer 2", value: 0, trait: "incorrect" },
+      { label: "Wrong Answer 3", value: 0, trait: "incorrect" }
+    ],
+  },
+  {
+    id: "Q45",
+    dimension: "Spatial Reasoning",
+    type: "mcq",
+    question: "Sample question for Spatial Reasoning (Q45)",
+    options: [
+      { label: "Correct Answer", value: 1, trait: "correct" },
+      { label: "Wrong Answer 1", value: 0, trait: "incorrect" },
+      { label: "Wrong Answer 2", value: 0, trait: "incorrect" },
+      { label: "Wrong Answer 3", value: 0, trait: "incorrect" }
     ],
   },
 ];
 
 export const DIMENSIONS = [
   "Logical Reasoning",
-  "Mathematical Aptitude",
-  "Linguistic Ability",
-  "Musical Intelligence",
-  "Creative Thinking",
-  "Interpersonal Skills",
-  "Intrapersonal Skills",
-  "Interest Assessment",
-  "Personality Type",
+  "Numerical Ability",
+  "Verbal Ability",
+  "Analytical Thinking",
+  "Problem Solving",
+  "Memory",
+  "Creativity",
+  "Attention",
+  "Spatial Reasoning",
 ];

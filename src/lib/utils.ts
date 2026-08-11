@@ -184,7 +184,7 @@ export function calculateDimensionScoresSync(
 
   return Object.entries(dimensionTotals).map(([name, { sum, count }]) => ({
     name,
-    score: Math.round((sum / (count * 4)) * 100),
+    score: Math.round((sum / count) * 100),
     maxScore: 100,
   }));
 }
