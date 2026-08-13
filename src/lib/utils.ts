@@ -205,3 +205,104 @@ export function getPersonalityType(dimensions: AssessmentResult["dimensions"]): 
 export function cn(...classes: (string | boolean | undefined | null)[]): string {
   return classes.filter(Boolean).join(" ");
 }
+
+export interface CareerMatch {
+  careerName: string;
+  aptitudeFit: number;
+  interestFit: number;
+  academicFit: number;
+  overallMatch: number;
+  matchLevel: "Strong" | "Good" | "Moderate" | "Low";
+}
+
+const careerInterestMapping = [
+  {
+    career: "Software Engineering",
+    aptitudes: ["Logical Reasoning", "Problem Solving", "Numerical Ability"],
+    interests: ["Technology", "Engineering"]
+  },
+  {
+    career: "Data Science",
+    aptitudes: ["Numerical Ability", "Analytical Thinking", "Logical Reasoning"],
+    interests: ["Technology", "Science & Research", "Business & Finance"]
+  },
+  {
+    career: "Mechanical Engineering",
+    aptitudes: ["Spatial Reasoning", "Numerical Ability", "Logical Reasoning"],
+    interests: ["Engineering", "Technology"]
+  },
+  {
+    career: "Medicine",
+    aptitudes: ["Memory", "Attention", "Problem Solving"],
+    interests: ["Healthcare", "Science & Research"]
+  },
+  {
+    career: "UI/UX Design",
+    aptitudes: ["Creativity", "Spatial Reasoning", "Attention"],
+    interests: ["Creative & Design", "Technology"]
+  },
+  {
+    career: "Finance",
+    aptitudes: ["Numerical Ability", "Analytical Thinking", "Attention"],
+    interests: ["Business & Finance", "Science & Research"]
+  },
+  {
+    career: "Law",
+    aptitudes: ["Verbal Ability", "Analytical Thinking", "Memory"],
+    interests: ["Law & Public Service", "Media & Communication"]
+  },
+  {
+    career: "Psychology & Counseling",
+    aptitudes: ["Verbal Ability", "Attention", "Problem Solving"],
+    interests: ["Education & Psychology", "Healthcare"]
+  },
+  {
+    career: "Media & Journalism",
+    aptitudes: ["Verbal Ability", "Creativity", "Memory"],
+    interests: ["Media & Communication", "Creative & Design"]
+  }
+];
+
+export function calculateCareerMatches(
+  scores: Record<string, number>
+): CareerMatch[] {
+  const matches: CareerMatch[] = [];
+
+  for (const mapping of careerInterestMapping) {
+    // 1. Calculate Aptitude Fit
+    let aptitudeSum = 0;
+    for (const apt of mapping.aptitudes) {
+      aptitudeSum += scores[apt] || 50; 
+    }
+    const aptitudeFit = Math.round(aptitudeSum / mapping.aptitudes.length);
+
+    // 2. Calculate Interest Fit
+    let interestSum = 0;
+    for (const int of mapping.interests) {
+      interestSum += scores[int] || 50;
+    }
+    const interestFit = Math.round(interestSum / mapping.interests.length);
+
+    // 3. Academic Fit (Mocked to 80 for Stage 1 Prototype)
+    const academicFit = 80;
+
+    // 4. Overall Match
+    const overallMatch = Math.round((aptitudeFit * 0.4) + (interestFit * 0.4) + (academicFit * 0.2));
+
+    let matchLevel: CareerMatch["matchLevel"] = "Low";
+    if (overallMatch >= 85) matchLevel = "Strong";
+    else if (overallMatch >= 75) matchLevel = "Good";
+    else if (overallMatch >= 60) matchLevel = "Moderate";
+
+    matches.push({
+      careerName: mapping.career,
+      aptitudeFit,
+      interestFit,
+      academicFit,
+      overallMatch,
+      matchLevel
+    });
+  }
+
+  return matches.sort((a, b) => b.overallMatch - a.overallMatch);
+}
