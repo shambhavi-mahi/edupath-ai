@@ -1,6 +1,6 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { motion, Variants } from "framer-motion";
 import { ReactNode } from "react";
 
 type Direction = "up" | "down" | "left" | "right" | "zoom" | "fade";
@@ -15,7 +15,7 @@ interface ScrollRevealProps {
   amount?: number;
 }
 
-const variants: Record<Direction, { hidden: object; visible: object }> = {
+const variants: Record<Direction, Variants> = {
   up:    { hidden: { opacity: 0, y: 50 },  visible: { opacity: 1, y: 0 } },
   down:  { hidden: { opacity: 0, y: -50 }, visible: { opacity: 1, y: 0 } },
   left:  { hidden: { opacity: 0, x: -60 }, visible: { opacity: 1, x: 0 } },
