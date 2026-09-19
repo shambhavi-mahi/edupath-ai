@@ -45,7 +45,7 @@ export default function BrainAssessment() {
     const startAssessment = async () => {
       setLoading(true);
       try {
-        const res = await fetch("http://localhost:5000/api/assessment/start", {
+        const res = await fetch("/api/assessment/start", {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({ userId: null }) 
@@ -79,7 +79,7 @@ export default function BrainAssessment() {
     if (currentStep + 1 >= totalQuestions) {
       setLoading(true);
       try {
-        const res = await fetch("http://localhost:5000/api/assessment/submit", {
+        const res = await fetch("/api/assessment/submit", {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({
@@ -89,8 +89,10 @@ export default function BrainAssessment() {
           })
         });
         const data = await res.json();
-        if (data.success) {
-          setResult(data.result);
+        if (data.assessment_id) {
+          setResult(data);
+        } else {
+          setError("Failed to get results.");
         }
       } catch (err) {
         setError("Failed to submit assessment.");
