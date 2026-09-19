@@ -1,3 +1,4 @@
+export const dynamic = 'force-dynamic';
 import { NextRequest, NextResponse } from "next/server";
 import { generatePathBotResponse } from "@/lib/ai/pathbot";
 import { UserProfile } from "@/types";
